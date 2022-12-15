@@ -1,8 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandalina.Game", "Mandalina.Game\Mandalina.Game.csproj", "{361D578A-9B37-47F7-A589-C9B7861B3D9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandalina.Desktop", "Mandalina.Desktop\Mandalina.Desktop.csproj", "{361D578A-9B37-47F7-A589-C9B7861B3D9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandalina.Server", "Mandalina.Server\Mandalina.Server.csproj", "{7B8F050A-32AB-4839-A6B7-B8CC69F353A3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Mandalina.Core", "Mandalina.Core\Mandalina.Core.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandalina.Android", "Mandalina.Android\Mandalina.Android.csproj", "{EBDD19C4-4CB4-42F7-8E10-3D6F0CD725F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +22,9 @@ Global
 		{7B8F050A-32AB-4839-A6B7-B8CC69F353A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B8F050A-32AB-4839-A6B7-B8CC69F353A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B8F050A-32AB-4839-A6B7-B8CC69F353A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDD19C4-4CB4-42F7-8E10-3D6F0CD725F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDD19C4-4CB4-42F7-8E10-3D6F0CD725F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDD19C4-4CB4-42F7-8E10-3D6F0CD725F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDD19C4-4CB4-42F7-8E10-3D6F0CD725F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
