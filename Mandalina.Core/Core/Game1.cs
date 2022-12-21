@@ -8,6 +8,7 @@ namespace Mandalina.Core
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Texture2D _texture;
 
         public Game1()
         {
@@ -26,7 +27,7 @@ namespace Mandalina.Core
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            _texture = Content.Load<Texture2D>("celeste_1");
             // TODO: use this.Content to load your game content here
         }
 
@@ -43,8 +44,9 @@ namespace Mandalina.Core
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(_texture, new Rectangle(0, 0, _texture.Width/4, _texture.Height/4), Color.White);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
