@@ -10,14 +10,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Items\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Characters\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\GameBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Input.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\RectangleOverlay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Items\BirchWood.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Items\PineWood.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Items\SpruceWood.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Items\Wand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\GameCharacter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Characters\Player.cs" />
   </ItemGroup>
 </Project>

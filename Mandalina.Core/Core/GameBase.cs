@@ -4,17 +4,18 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Mandalina.Core
 {
-    public class Game1 : Game
+    public class GameBase : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Texture2D _texture;
 
-        public Game1()
+        public GameBase()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            Window.AllowUserResizing = true;
         }
 
         protected override void Initialize()
