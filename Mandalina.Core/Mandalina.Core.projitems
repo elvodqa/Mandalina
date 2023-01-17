@@ -12,6 +12,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Items\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Characters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Screens\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
@@ -28,5 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Items\Wand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\GameCharacter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Characters\Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Screens\MainMenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Screens\SplashScreen.cs" />
   </ItemGroup>
 </Project>

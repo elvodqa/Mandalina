@@ -1,14 +1,22 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Mandalina.Core.Core.Screens;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.Screens;
+using MonoGame.Extended.Screens.Transitions;
 
 namespace Mandalina.Core
 {
     public class GameBase : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-        private Texture2D _texture;
+        public SpriteBatch SpriteBatch;
+        public ScreenManager ScreenManager;
+        public bool DebugMode = false;
+        
+
+        public Color ClearColor = new(88, 85, 83);
 
         public GameBase()
         {
@@ -16,39 +24,55 @@ namespace Mandalina.Core
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             Window.AllowUserResizing = true;
+            _graphics.PreferredBackBufferWidth = 1280;
+            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.ApplyChanges();
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
+            Window.Title = "Mandalina";
+            ScreenManager = new ScreenManager();
+            Components.Add(ScreenManager);
+            if (Environment.GetEnvironmentVariable("SKIP-SPLASH") == null)
+            {
+                ScreenManager.LoadScreen(new SplashScreen(this), new FadeTransition(GraphicsDevice, Color.Black, 0.5f));
+            }
+            else
+            {
+                ScreenManager.LoadScreen(new MainMenu(this), new FadeTransition(GraphicsDevice, Color.Black, 0.5f));
+            }
+            if (Environment.GetEnvironmentVariable("DEBUG") != null)
+            {
+                DebugMode = true;
+            }
+            ScreenManager.LoadScreen(new SplashScreen(this), new FadeTransition(GraphicsDevice, Color.Black));
+            
         }
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _texture = Content.Load<Texture2D>("celeste_1");
-            // TODO: use this.Content to load your game content here
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            Input.GetKeyboardState();
+            Input.GetMouseState();
 
-            // TODO: Add your update logic here
 
+            
             base.Update(gameTime);
+            
+            
+            Input.FixScrollLater();
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(_texture, new Rectangle(0, 0, _texture.Width/4, _texture.Height/4), Color.White);
-            _spriteBatch.End();
-
+            GraphicsDevice.Clear(ClearColor);
+            
             base.Draw(gameTime);
         }
     }

@@ -1,6 +1,5 @@
 ﻿<Properties StartupConfiguration="{361D578A-9B37-47F7-A589-C9B7861B3D9F}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Mandalina.Core/Core/Characters/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Mandalina.Core/Core/Screens/SplashScreen.cs">
     <Files>
       <File FileName="Mandalina.Core/Core/Item.cs" Line="27" Column="12" />
       <File FileName="Mandalina.Core/Core/Items/PineWood.cs" Line="12" Column="21" />
@@ -8,8 +7,10 @@
       <File FileName="Mandalina.Core/Core/Items/BirchWood.cs" Line="15" Column="3" />
       <File FileName="Mandalina.Core/Core/Items/Wand.cs" Line="16" Column="17" />
       <File FileName="Mandalina.Core/Core/GameCharacter.cs" Line="20" Column="4" />
-      <File FileName="Mandalina.Core/Core/GameBase.cs" Line="14" Column="10" />
-      <File FileName="Mandalina.Core/Core/Characters/Player.cs" Line="11" Column="2" />
+      <File FileName="Mandalina.Core/Core/GameBase.cs" Line="27" Column="1" />
+      <File FileName="Mandalina.Core/Core/Characters/Player.cs" Line="17" Column="53" />
+      <File FileName="Mandalina.Core/Core/Screens/MainMenu.cs" Line="14" Column="56" />
+      <File FileName="Mandalina.Core/Core/Screens/SplashScreen.cs" Line="28" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +20,11 @@
               <Node name="Core" expanded="True">
                 <Node name="Characters" expanded="True" />
                 <Node name="Items" expanded="True" />
+                <Node name="Screens" expanded="True">
+                  <Node name="SplashScreen.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
-            <Node name="Mandalina.Desktop" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -29,8 +32,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Mandalina.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
